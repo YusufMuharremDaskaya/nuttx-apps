@@ -1,0 +1,10 @@
+############################################################################
+# apps/system/hrt_test/Make.defs
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+############################################################################
+
+ifneq ($(CONFIG_SYSTEM_HRT_TEST),)
+CONFIGURED_APPS += $(APPDIR)/system/hrt_test
+endif

@@ -1,0 +1,10 @@
+############################################################################
+# apps/system/pwm_test/Make.defs
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+############################################################################
+
+ifneq ($(CONFIG_SYSTEM_PWM_TEST),)
+CONFIGURED_APPS += $(APPDIR)/system/pwm_test
+endif

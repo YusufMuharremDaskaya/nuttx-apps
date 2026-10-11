@@ -1,0 +1,10 @@
+############################################################################
+# apps/system/eeprom_test/Make.defs
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+############################################################################
+
+ifneq ($(CONFIG_SYSTEM_EEPROM_TEST),)
+CONFIGURED_APPS += $(APPDIR)/system/eeprom_test
+endif

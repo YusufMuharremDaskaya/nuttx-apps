@@ -1,0 +1,29 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+menuconfig SYSTEM_EEPROM_TEST
+	tristate "AM67A AT24C512C EEPROM Test Application"
+	default y
+	---help---
+		Enable diagnostic test tool for the on-board AT24C512C EEPROM
+		and MTD storage (/dev/eeprom, /fs/mtd_params).
+
+if SYSTEM_EEPROM_TEST
+
+config SYSTEM_EEPROM_TEST_PROGNAME
+	string "Program name"
+	default "eeprom_test"
+	---help---
+		This is the name of the program that will be used in the shell.
+
+config SYSTEM_EEPROM_TEST_PRIORITY
+	int "EEPROM test task priority"
+	default 100
+
+config SYSTEM_EEPROM_TEST_STACKSIZE
+	int "EEPROM test stack size"
+	default 4096
+
+endif

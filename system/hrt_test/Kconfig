@@ -1,0 +1,29 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+menuconfig SYSTEM_HRT_TEST
+	tristate "High Resolution Timer (HRT) Test Application"
+	default n
+	---help---
+		Enable the High Resolution Timer (HRT) test application for testing
+		monotonicity, 1-second accuracy, latency, and 1000 Hz periodic callouts.
+
+if SYSTEM_HRT_TEST
+
+config SYSTEM_HRT_TEST_PROGNAME
+	string "Program name"
+	default "hrt_test"
+	---help---
+		This is the name of the program that will be used in the shell.
+
+config SYSTEM_HRT_TEST_PRIORITY
+	int "HRT test task priority"
+	default 100
+
+config SYSTEM_HRT_TEST_STACKSIZE
+	int "HRT test stack size"
+	default 2048
+
+endif
