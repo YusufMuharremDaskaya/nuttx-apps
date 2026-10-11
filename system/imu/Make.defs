@@ -1,0 +1,10 @@
+############################################################################
+# apps/system/imu/Make.defs
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+############################################################################
+
+ifneq ($(CONFIG_SYSTEM_IMU),)
+CONFIGURED_APPS += $(APPDIR)/system/imu
+endif
